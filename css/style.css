@@ -1,0 +1,217 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  background-color: #DFDFDE;
+  font-family: 'Permanent Marker',
+    sans-serif;
+  ;
+}
+
+body {
+  margin: 1rem 5rem;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* 
+< !-- Navigational Content --> */
+
+nav {
+  display: flex;
+  height: 3rem;
+}
+
+nav section.linkL {
+  justify-content: flex-start;
+  width: 50%;
+  padding-left: 3rem;
+  display: flex;
+}
+
+nav section.linkR {
+  width: 50%;
+  justify-content: flex-end;
+  display: flex;
+  padding-right: 3rem;
+}
+
+/* Main Section*/
+main {
+  display: flex;
+}
+
+section.columnLeft {
+  width: 50%;
+  text-align: end;
+  padding-right: 5rem;
+  background-color: ;
+}
+
+section.columnLeft div h1 {
+  justify-content: flex-end;
+  padding-top: 3rem;
+}
+
+div img.arrow {
+  height: 6rem;
+  padding: 0 3rem 0 0;
+}
+
+
+section.columnRight {
+  width: 50%;
+}
+
+section.columnRight div img {
+  width: auto;
+  height: 18rem;
+  padding: 0 5rem;
+}
+
+/* Quote Results Section */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+section.quote div h2 {
+  padding: 3rem 2rem;
+  background-color: #8D8DAA;
+  border-radius: .5rem;
+  width: 40%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+
+}
+
+section.quote div {
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+section.quote div img {
+
+  margin: 0 8rem;
+  margin-top: -10rem;
+
+}
+
+/* Footer */
+footer div {
+  display: flex;
+  justify-content: center;
+}
+
+footer div p {
+  font-size: 1.25rem;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+a:hover {
+  transform: translateY(-3px);
+  color: #8D8DAA;
+}
+
+/* button */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+button {
+  border-radius: .5rem;
+  font-size: 1.25rem;
+}
+
+.text-box {
+  margin-left: 44vw;
+  margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
