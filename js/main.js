@@ -1,4 +1,4 @@
-document.querySelector('button').addEventListener('click', getKanye, newImage)
+document.querySelector('button').addEventListener('click', getKanye)
 
 function getKanye() {
   fetch('https://api.kanye.rest')
@@ -13,11 +13,7 @@ function getKanye() {
 }
 
 function newImage() {
-  if (document.getElementById("img").src == "css/Images/New/kanyeAvatar.png") {
-    document.getElementById("img2").src = "css/Images/New/kanyejawdrop.png"
-  } else if (document.getElementById("img2").src = "css/Images/New/kanyejawdrop.png") {
-    document.getElementById("img3").src = "css/Images/New/kanyephone.png"
-  }
+  (document.getElementById("img1").src = "css/Images/New/kanyejawdrop.png")
 }
+document.querySelector('button').addEventListener('click', newImage)
 
-// testing
