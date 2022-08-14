@@ -11,10 +11,6 @@
   ;
 }
 
-body {
-  margin: 1rem 5rem;
-}
-
 
 /******************************************
 /* LAYOUT
@@ -22,10 +18,16 @@ body {
 
 /* 
 < !-- Navigational Content --> */
+header {
+  background-color: #8D9CAA;
+}
 
 nav {
   display: flex;
   height: 3rem;
+  margin: 0 5rem;
+  padding-top: .5rem;
+  background-color: inherit;
 }
 
 nav section.linkL {
@@ -33,6 +35,7 @@ nav section.linkL {
   width: 50%;
   padding-left: 3rem;
   display: flex;
+  background-color: inherit;
 }
 
 nav section.linkR {
@@ -40,39 +43,70 @@ nav section.linkR {
   justify-content: flex-end;
   display: flex;
   padding-right: 3rem;
+  background-color: inherit;
 }
 
 /* Main Section*/
 main {
   display: flex;
+  padding: 1rem 5rem;
+  background-color: #8D9CAA;
 }
 
 section.columnLeft {
   width: 50%;
   text-align: end;
   padding-right: 5rem;
-  background-color: ;
+  background-color: #8D9CAA;
+}
+
+section.columnLeft div {
+  background-color: inherit;
 }
 
 section.columnLeft div h1 {
   justify-content: flex-end;
   padding-top: 3rem;
+  background-color: inherit;
 }
 
 div img.arrow {
   height: 6rem;
   padding: 0 3rem 0 0;
+  background-color: inherit;
 }
 
 
 section.columnRight {
   width: 50%;
+  background-color: #8D9CAA;
+}
+
+@media(max-width: 1090px) {
+  section.columnRight {
+    display: none;
+  }
+
+  section.columnLeft {
+    width: 100%;
+  }
+
+  section.columnLeft div h1 {
+    justify-content: flex-start;
+  }
+
+  section.columnLeft
+}
+
+section.columnRight div {
+  background-color: inherit;
 }
 
 section.columnRight div img {
   width: auto;
   height: 18rem;
   padding: 0 5rem;
+  background-color: inherit;
 }
 
 /* Quote Results Section */
@@ -80,11 +114,13 @@ section.quote {
   display: flex;
   flex-direction: column;
   padding-top: 5rem;
+  margin: 1rem 5rem;
 }
 
 section.quote div h2 {
   padding: 3rem 2rem;
-  background-color: #8D8DAA;
+  background-color: #8D9CAA;
+  /* background-color: #8D8DAA; */
   border-radius: .5rem;
   width: 40%;
   text-align: center;
@@ -113,12 +149,39 @@ section.quote div img {
 footer div {
   display: flex;
   justify-content: center;
+  background-color: #8D9CAA;
 }
 
 footer div p {
   font-size: 1.25rem;
+  background-color: inherit;
 }
 
+section.aboutDescription {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+section.aboutDescription h1 {
+  width: 100%;
+  margin: 8rem 0 0 0;
+}
+
+section.aboutDescription div p {
+  width: 100%;
+  margin: 1rem 0 5rem 0;
+  font-size: 1.45rem;
+  line-height: 2rem;
+}
+
+section.aboutDescription img {
+  margin-bottom: 8rem;
+  height: 400px;
+  width: auto;
+  border: 5px solid gray;
+  border-radius: 2%;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
